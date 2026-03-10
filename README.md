@@ -1,16 +1,116 @@
-# React + Vite
+React Authentication System (Landing Page)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a basic authentication system built using React for the frontend and Node.js with Express for the backend.
+It includes User Registration and User Login functionality with secure password storage.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tech Stack
 
-## React Compiler
+Frontend:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Tailwind CSS
+- Axios / Fetch API
 
-## Expanding the ESLint configuration
+Backend:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js
+- Express.js
+
+Database:
+ MySQL
+
+---
+
+Features
+
+- User Registration
+- User Login
+- Password Hashing for secure storage
+- API integration between frontend and backend
+- Simple and clean UI
+- Responsive layout using Tailwind CSS
+
+---
+
+API Endpoints
+
+Register User
+
+POST /api/register
+
+Request Body:
+
+- name
+- email
+- password
+
+Login User
+
+POST /api/login
+
+Request Body:
+
+- email
+- password
+
+On successful login, the server returns a success message (token optional).
+
+---
+
+Project Structure
+
+react-auth-landing-page
+│
+├── frontend
+│   ├── src
+│   ├── components
+│   ├── pages
+│   └── App.jsx
+│
+├── backend
+│   ├── routes
+│   ├── controllers
+│   └── server.js
+│
+└── README.md
+
+---
+
+Installation and Setup
+
+1️⃣ Clone the repository
+
+git clone https://github.com/Sumit-Kirola/react-auth-landing-page.git
+
+---
+
+2️⃣ Run Backend
+
+cd backend
+npm install
+node server.js
+
+Backend will run on:
+
+http://localhost:5000
+
+---
+
+3️⃣ Run Frontend
+
+cd frontend
+npm install
+npm run dev
+
+Frontend will run on:
+
+http://localhost:5173
+
+
+
+
+Author
+
+Developed as part of internship assignment.
